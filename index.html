@@ -668,6 +668,103 @@
   ::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); }
   ::-webkit-scrollbar-thumb { background: rgba(230,126,34,0.5); border-radius: 3px; }
   ::-webkit-scrollbar-thumb:hover { background: rgba(230,126,34,0.8); }
+
+  /* ===== RESPONSIVE - TABLET (≤900px) ===== */
+  @media (max-width: 900px) {
+    .header {
+      padding: 12px 16px;
+      gap: 12px;
+    }
+    .header-logo { width: 56px; height: 56px; }
+    .header-title h1 { font-size: 1.4rem; letter-spacing: 1px; }
+    .header-title p { font-size: 0.7rem; }
+    .header-badge { font-size: 0.78rem; padding: 6px 12px; }
+
+    .main {
+      grid-template-columns: 1fr;
+      min-height: unset;
+    }
+    .panel-left {
+      height: auto;
+      position: static;
+      border-right: none;
+      border-bottom: 2px solid rgba(230,126,34,0.3);
+    }
+    .panel-right { padding: 16px; }
+  }
+
+  /* ===== RESPONSIVE - MOBILE (≤600px) ===== */
+  @media (max-width: 600px) {
+    .header {
+      flex-wrap: wrap;
+      padding: 10px 12px;
+      gap: 8px;
+    }
+    .header-logo { width: 44px; height: 44px; border-width: 2px; }
+    .header-title h1 { font-size: 1.1rem; letter-spacing: 0; }
+    .header-title p { font-size: 0.65rem; }
+    .header-badge {
+      margin-left: 0;
+      font-size: 0.72rem;
+      padding: 5px 10px;
+    }
+
+    .panel-section { padding: 14px 12px; }
+    .panel-section-title { font-size: 0.78rem; }
+
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+    .qty-price-row { grid-template-columns: 1fr 1fr; }
+
+    .panel-tabs { flex-wrap: wrap; gap: 4px; }
+    .tab { padding: 8px 14px; font-size: 0.8rem; }
+
+    .quote-actions { flex-direction: column; gap: 8px; }
+    .quote-actions .btn { width: 100%; }
+
+    #quotePreview {
+      padding: 16px;
+      font-size: 0.82rem;
+    }
+    .doc-header {
+      grid-template-columns: auto 1fr;
+      gap: 10px;
+    }
+    .doc-number-box {
+      grid-column: 1 / -1;
+      min-width: unset;
+      text-align: left;
+      padding: 10px 14px;
+    }
+    .doc-logo { width: 56px; height: 56px; }
+    .doc-company h2 { font-size: 1rem; }
+    .doc-client-grid { grid-template-columns: 1fr; }
+
+    .doc-table { font-size: 0.72rem; }
+    .doc-table thead th { padding: 8px 6px; font-size: 0.7rem; }
+    .doc-table tbody td { padding: 7px 6px; }
+
+    .totals-box { max-width: 100%; }
+
+    .db-toolbar { flex-direction: column; align-items: stretch; }
+    .db-toolbar input { min-width: unset; }
+    .db-toolbar .btn { width: 100%; }
+
+    .db-table { font-size: 0.78rem; }
+    .db-table thead th,
+    .db-table tbody td { padding: 8px 8px; }
+
+    .modal { min-width: unset; padding: 20px 16px; }
+    .modal-actions { flex-direction: column; }
+
+    .btn { font-size: 0.82rem; padding: 9px 14px; }
+    .quote-items-table { font-size: 0.75rem; }
+    .quote-items-table thead th,
+    .quote-items-table tbody td { padding: 7px 8px; }
+    .quote-items-table input[type="number"],
+    .quote-items-table input[type="text"] { width: 70px; font-size: 0.75rem; }
+
+    .notification { top: 10px; right: 10px; left: 10px; font-size: 0.82rem; }
+  }
 </style>
 </head>
 <body>
